@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                 sh 'nodemon src/app.js -e js,hbs'
+                 sh 'npm run start'
              }
         }
     }
