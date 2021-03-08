@@ -1,14 +1,11 @@
 pipeline {
-/*     agent {
+     agent {
         docker {
             image 'node:6-alpine'
-            args '-p 3000:3000'
+            args '-p 3001:3001'
             args '-u 0:0'
         }
-    } */
-    agent any
-
-    tools{nodejs "node"}
+    }
 
     stages {
         stage('Build') {
@@ -18,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                 sh './scripts/deploy.sh'
+                 sh 'nodemon src/app.js -e js,hbs'
              }
         }
     }
