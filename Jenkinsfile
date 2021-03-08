@@ -12,5 +12,10 @@ pipeline {
                 sh 'npm install --unsafe-perm'
             }
         }
+        stage('Deploy') {
+            steps {
+                 sh './scripts/deploy.sh'
+             }
+        }
     }
 }
