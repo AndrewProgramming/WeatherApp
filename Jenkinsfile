@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                  sh './scripts/stop-app.sh'
-                 sh './scripts/stop-app.sh'
+                 sh './scripts/start-app.sh'
              }
         }
     }
