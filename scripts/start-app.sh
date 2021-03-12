@@ -2,6 +2,6 @@ echo "starting weather app..."
 set -x
 npm start &
 
-sleep 1
+sleep 5
 echo $! > ~/pidfile
 set +x
