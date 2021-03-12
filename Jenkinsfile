@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+
     stages {
         stage('Build') {
             steps {
@@ -9,9 +10,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                 sh 'killall node'
+                 sh './scripts/stop-app.sh'
                  sh 'npm run start'
              }
         }
     }
+}
 }
