@@ -1,3 +1,3 @@
 echo "starting weather app..."
-BUILD_ID=dontKillMe npm start &
+export JENKINS_NODE_COOKIE=dontKillMe && npm start &
 
