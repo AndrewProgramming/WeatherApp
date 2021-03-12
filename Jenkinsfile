@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                  sh './scripts/stop-app.sh'
-                 sh 'npm run start'
+                 sh './scripts/stop-app.sh'
              }
         }
     }
