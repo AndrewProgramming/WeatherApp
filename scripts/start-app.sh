@@ -1,3 +1,3 @@
 echo "starting weather app..."
-npm start
+BUILD_ID=dontKillMe npm start &
 
