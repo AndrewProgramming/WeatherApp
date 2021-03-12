@@ -1,3 +1,4 @@
+set -x
 PID=$(lsof -t -i:3001)
 if [ -z "${PID}" ]; then
     echo "no node app running..."
@@ -5,4 +6,4 @@ if [ -z "${PID}" ]; then
     echo "stop app running on port 3001 with PID ${PID}"
     kill -9 ${PID}
 fi
-
+set +x

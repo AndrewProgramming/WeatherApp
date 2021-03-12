@@ -1,2 +1,4 @@
 echo "starting weather app..."
-npm run start &
+set -x
+npm start &
+set +x
