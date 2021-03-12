@@ -1,3 +1,2 @@
 echo "starting weather app..."
-
-nohup node src/app.js &
+npm run start &
